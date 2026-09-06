@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A beautiful and responsive product ordering application.">
+    <title>Product Order App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">ShopApp</div>
+        <nav>
+            <button id="nav-products" class="active">Products</button>
+            <button id="nav-cart">Cart <span id="cart-count">0</span></button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Products View -->
+        <section id="products-view" class="view active-view">
+            <h1>Our Products</h1>
+            <div id="product-list" class="grid">
+                <!-- Products will be injected here via JavaScript -->
+            </div>
+        </section>
+
+        <!-- Cart View -->
+        <section id="cart-view" class="view">
+            <h1>Your Cart</h1>
+            <div id="cart-content" class="hidden">
+                <div id="cart-items" class="cart-items-container">
+                    <!-- Cart items injected here via JavaScript -->
+                </div>
+                <div class="cart-summary">
+                    <h2>Order Summary</h2>
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span id="cart-subtotal">$0.00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Tax (10%)</span>
+                        <span id="cart-tax">$0.00</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Total</span>
+                        <span id="cart-total">$0.00</span>
+                    </div>
+                    <button id="checkout-btn" class="primary-btn checkout-btn-glow">Proceed to Checkout</button>
+                </div>
+            </div>
+            <div id="empty-cart-message">
+                <div class="empty-cart-icon">🛒</div>
+                <h2>Your cart is empty</h2>
+                <p>Looks like you haven't added anything to your cart yet.</p>
+                <button id="continue-shopping-btn" class="secondary-btn">Continue Shopping</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
